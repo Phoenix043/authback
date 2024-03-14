@@ -72,7 +72,7 @@ app.post('/register', async (req, res) => {
       // Generate a JWT token for authentication
       const token = jwt.sign({ userId: user._id ,username:username}, 'secret-key', { expiresIn: '1h' });
   
-     res.cookie("token",token,{ sameSite: 'Lax' },{ partitioned: true })
+     res.cookie("token",token,{ partitioned: true })
 
       res.json({ message: 'Login successful',token:token });
     } catch (error) {
