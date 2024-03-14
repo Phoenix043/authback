@@ -10,14 +10,14 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: 'https://authfront-six.vercel.app',
   credentials: true
 };
 
 app.use(cors(corsOptions));
 
 
-mongoose.connect('mongodb://localhost/auth-system');
+mongoose.connect('mongodb+srv://vikram:vikramnaik@cluster0.dt8oe9s.mongodb.net/auth-sysytem?retryWrites=true&w=majority&appName=Cluster0');
 
 // Define MongoDB Schema and Models for Users
 
